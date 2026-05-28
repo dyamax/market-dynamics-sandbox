@@ -1,6 +1,6 @@
+import Star from '../../core/star';
 import LOADER from './loader.module.css';
 import { useRef, useEffect } from "react";
-import Star from "../../core/star";
 
 function Loader() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -18,7 +18,7 @@ function Loader() {
 
     const w = canvas.clientWidth;
     const h = canvas.clientHeight;
-    const star = new Star(w/2, h/2, 20, '#646cff', 1.5, 30, 10);
+    const star = new Star(w/2.6, h/1.9, 15, 5, '#646cff', 1);
 
     function animate() {
       if (!ctx) return

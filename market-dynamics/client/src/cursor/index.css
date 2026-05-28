@@ -1,0 +1,39 @@
+.cursor {
+  --size: 35px;
+  --blur: 10px;
+  --mask-props: center / contain no-repeat;
+
+  position: fixed;
+  width: var(--size);
+  height: var(--size);
+  background: rgba(190, 190, 190, 0.26);
+  box-shadow:
+    inset 4px 4px 10px var(--theme-frame-darker),
+    inset -4px -4px 10px var(--theme-frame-lighter),
+    4px 4px 10px var(--theme-frame-darker),
+    -4px -4px 10px var(--theme-frame-lighter);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+  mask: url('/navigate.png') var(--mask-props);
+  -webkit-mask: url('/navigate.png') var(--mask-props);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.cursor::before {
+  --alignment: -1.5px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  content: "";
+  inset: 7px;
+  background: #b379ff;
+  box-shadow:
+    inset 2px 2px 3px var(--theme-frame-darker),
+    inset -2px -2px 3px var(--theme-frame-lighter),
+    2px 2px 3px var(--theme-frame-darker),
+    -2px -2px 3px var(--theme-frame-lighter);
+  mask: url('/navigate.png') var(--mask-props);
+  -webkit-mask: url('/navigate.png') var(--mask-props);
+  transform: translate(var(--alignment),var(--alignment));
+}

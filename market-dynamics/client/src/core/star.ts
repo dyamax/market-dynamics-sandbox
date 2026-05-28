@@ -1,10 +1,9 @@
-import { STAR_CONFIG } from "../config";
+import { STAR_CONFIG } from "./star-config";
 
 export default class Star {
     x: number
     y: number
     size: number
-    initSize: number
     color: string
     pulseDir: number
     speed: number
@@ -13,18 +12,17 @@ export default class Star {
     boundingBoxSize: number = 0
     index: number = 0
 
-    constructor(x: number, y: number, size: number, color?: string, aniSpeed?: number, mxs?: number, mns?: number) {
+    constructor(x: number, y: number, mxs: number, mns: number, color?: string, aniSpeed?: number) {
         this.x = x;
         this.y = y;
-        this.size = size;
-        this.initSize = size;
+        this.size = Math.random() * (mxs - mns) + mns;
         this.color = !!color ? color : STAR_CONFIG.color;
 
         this.pulseDir = 1;
-        this.speed = !!aniSpeed ? aniSpeed : Math.random() * 0.5;
+        this.speed = !!aniSpeed ? aniSpeed : Math.random() * 0.2 + .2;
 
-        this.max_size_bound = !!mxs ? mxs : this.size;
-        this.min_size_bound = !!mns ? mns : this.size;
+        this.max_size_bound = mxs;
+        this.min_size_bound = mns;
     }
 
     draw(ctx: CanvasRenderingContext2D) {

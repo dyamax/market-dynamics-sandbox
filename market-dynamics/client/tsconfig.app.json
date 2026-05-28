@@ -7,6 +7,7 @@
     "module": "ESNext",
     "types": ["vite/client"],
     "skipLibCheck": true,
+    "composite": true,
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -22,7 +23,17 @@
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
   },
-  "include": ["src"]
+  // "include": ["src"],
+  "baseUrl": ".",
+  "paths": {
+    "@/*": ["src/*"],
+    "@apps/*": ["src/apps/*"],
+    "@app-comps/*": ["src/app-components/*"],
+    "@ac-ld/*": ["src/app-components/<none>-ld/*"],
+    "@ac-md/*": ["src/app-components/main-content-md/*"],
+    "@comps/*": ["src/components/*"],
+  },
+  "include": ["src", "src/**/*.tsx"]
 }

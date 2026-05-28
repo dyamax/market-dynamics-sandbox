@@ -1,0 +1,101 @@
+:root {
+    --mobile-main-bg-color: #f1f1f1;
+    --mobile-plates-color: #fff;
+    --mobile-text-color: #000;
+    /* --mobile-main-bg-lighter: #1e1e1e;
+    --mobile-main-bg-darker: #050505; */
+    --ripple-t: none; /* set via script */
+    --m-cs: 7px;
+}
+
+@media(prefers-color-scheme: dark) {
+    :root {
+        --mobile-main-bg-color: #111111;
+        --mobile-plates-color: #000;
+        --mobile-text-color: #fff;
+    }
+}
+
+#root {
+    height: 100dvh;
+}
+
+.mobile-wrapper {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, var(--mobile-main-bg-color), transparent 80%);
+}
+
+.grid {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: repeat(35, 1fr) / repeat(20, 1fr); /* row, col */
+    background:
+        radial-gradient(circle at 40% 50%, #646cff37, #646cff0f 31.25%, transparent 50%),
+        radial-gradient(circle at 65% 40%, #1723ff17, #1723ff0c 25%, transparent 40%),
+        radial-gradient(circle at 55% 72%, #6f00ff40, #b795e40a 25%, transparent 40%);
+    gap: 1px;
+}
+
+.filler {
+    width: 100%;
+    height: 100%;
+    background: var(--mobile-plates-color);
+    transition: var(--ripple-t);
+    font-size: x-small;
+    text-align: center;
+    padding-top: 2.5px;
+}
+
+.invoked {
+    transform: rotateZ(180deg) rotateY(180deg);
+    transition: var(--ripple-t);
+    z-index: 999;
+}
+
+.message {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    width: max-content;
+    max-width: 100%;
+    padding: 0vh 2vw;
+    border: dashed 1px #646CFF;
+    color: var(--mobile-text-color);
+    font-size: small;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.7;
+    white-space: pre-line;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    transform: translate(-50%,0);
+}
+
+.message::before,
+.message::after {
+    position: absolute;
+    content: '';
+    width: var(--m-cs);
+    height: var(--m-cs);
+    background: #646CFF;
+    border-radius: 50%;
+}
+
+.message::before {
+    top: 50%;
+    left: 0;
+    transform: translate(-60%,-50%);
+}
+
+.message::after {
+    top: 50%;
+    right: 0;
+    transform: translate(60%,-50%);
+}
+
+.message-emj {
+    top: 55.15%;
+    line-height: 2;
+}

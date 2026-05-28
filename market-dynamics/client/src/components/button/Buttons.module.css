@@ -1,0 +1,45 @@
+button {
+    padding: 0.6em 1.2em;
+    border-radius: 8px;
+    transition: .25s;
+}
+button div {
+    --s: 2.4vh;
+    width: var(--s);
+    height: var(--s);
+    background: var(--theme-frame-inv-color);
+}
+
+/* ///////////////////////// :variant ///////////////////////// */
+
+.primary {
+    border: 1px solid transparent;
+    background-color: var(--theme-color-1);
+}
+.primary:hover {
+    background-color: var(--theme-color-1-darker);
+}
+
+.flat {
+    border: none;
+    background-color: var(--theme-frame-color);
+    box-shadow: var(--box-shadow-variant-btn);
+}
+.flat:active {
+    box-shadow: var(--box-shadow-variant-btn-active)
+}
+
+/* ///////////////////////// :status ///////////////////////// */
+
+.disabled {
+    cursor: default;
+    pointer-events: none;
+    box-shadow: none;
+    filter: invert(20%);
+}
+
+/* ///////////////////////// :size ///////////////////////// */
+
+.small {
+    padding: 0.3em .6em;
+}

@@ -1,5 +1,5 @@
 export const INIT_STATE = {
     inputMode: 'manual',
-    openTopic: 'externalities',
+    openTopic: 'elasticities',
     islandState: 'off',
 }

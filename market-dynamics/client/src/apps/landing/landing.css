@@ -17,7 +17,7 @@ canvas {
   left: 50%;
   position: absolute;
   width: 72%;
-  font-size: 6rem;
+  font-size: 5rem;
   font-weight: bolder;
   background: linear-gradient(45deg, var(--theme-frame-inv-color) 1%, var(--theme-frame-color) 25%, #5f5f5f);
   background-clip: text;

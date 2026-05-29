@@ -266,6 +266,8 @@ function App() {
                             className={`input-mode-switch ${inputMode === 'manual' ? 'input-mode-selected' : ''}`}
                             onClick={() => setInputMode('manual')}>manual</Trigger>
                     </div>
+
+                    <h3>Topics</h3>
                     {inputMode === 'auto' ? (
                         ExtReqIntf(requestQuery,reqOnChange,disabledBtns,autoFill,dispatchRunInference,requestQueryCopy,isLoading,gptRes)
                     ) : (

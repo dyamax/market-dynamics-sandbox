@@ -23,7 +23,7 @@ function ExtsMainContent({
 
     return (
         <React.Fragment>
-            <h2 className='silkscreen-h'>Externalities</h2>
+            <h2>Externalities</h2>
 
             <ExtsGraph
                 title=''

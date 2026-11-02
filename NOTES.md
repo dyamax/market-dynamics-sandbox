@@ -6,7 +6,7 @@
 
 ## Use Model
 
-ChatGPT 4.1 nano  
+ChatGPT 5 nano  
 ### Cost: 
 Per 1M tokens: ```$0.20```  
 Per token: ```$0.0000002```  

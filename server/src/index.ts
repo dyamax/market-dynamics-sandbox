@@ -18,11 +18,10 @@ app.post('/api/classify', async (req: any, res: any) => {
 
     const prompt = `
         JSON: type:no_effect/positive/negative,
-        demand:decrease/increase/no_impact,
-        supply:decrease/increase/no_impact,
-        effect_mag:float range -1.00 to +1.00 inclusive
-        Externality:${externalityQuery}
-        Market structure:${market_structure}
+        eside:consumption/production,
+        extval: <dollar amount, range<0,100>, abs(cost | benefit)>.
+        Inquiry, Externality:${externalityQuery},
+        Market structure:${market_structure},
         Industry:${industry}
     `;
 
@@ -42,6 +41,6 @@ app.post('/api/classify', async (req: any, res: any) => {
 });
 
 app.listen(3000, () => {
-  console.log('⊢𐫰𐫰 Run started 𐫰𐫰⊣');
+  console.log('𐫰𐫰𐫰 Run started 𐫰𐫰𐫰');
 });
 

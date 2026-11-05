@@ -1,4 +1,4 @@
-import React, { type ChangeEvent, type Dispatch, type SetStateAction } from 'react';
+import React, { type ChangeEvent } from 'react';
 import Loader from '../../components/loader/loader';
 import Trigger from '../../components/button';
 

@@ -2,6 +2,10 @@
 
 Market Dynamics is an interactive visual economics learning project focused on helping students understand how market curves and indicators respond to changing conditions. Instead of studying only static diagrams, users can explore interactive models of elasticities and externalities.
 
+**Live website:** https://dyamax.github.io/market-dynamics-sandbox/
+
+The website is built from `client/` and deployed to GitHub Pages by the workflow in `.github/workflows/deploy-pages.yml`. Set the repository's Pages source to **GitHub Actions** under **Settings → Pages** to enable deployment.
+
 ## Features
 
 - Interactive supply and demand models for elasticities and externalities.

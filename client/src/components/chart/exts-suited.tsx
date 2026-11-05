@@ -5,7 +5,6 @@ type LocalGraphProps = {
   title: string
   className: string
   extGP: ExtsGraphProps
-  setExtGP: React.Dispatch<React.SetStateAction<ExtsGraphProps>>
   setVisIndicators: React.Dispatch<React.SetStateAction<ExtsVisIndicatorsProps>>
 }
 
@@ -31,7 +30,6 @@ function ExtsGraph({
     eside: 'consumption',
     extval: 10
   },
-  setExtGP,
   setVisIndicators
 }: LocalGraphProps) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);

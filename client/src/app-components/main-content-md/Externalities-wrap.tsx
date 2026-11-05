@@ -7,7 +7,6 @@ type IVM = 'numeric' | 'percentage'
 
 type T_EMC = {
     extsGraphProps: ExtsGraphProps,
-    setExtsGraphProps: React.Dispatch<React.SetStateAction<ExtsGraphProps>>,
     visIndicators: ExtsVisIndicatorsProps,
     setVisIndicators: React.Dispatch<React.SetStateAction<ExtsVisIndicatorsProps>>, 
     indicatorsViewMode: IVM,
@@ -15,12 +14,10 @@ type T_EMC = {
 }
 
 function ExtsMainContent({
-    extsGraphProps, setExtsGraphProps,
+    extsGraphProps,
     visIndicators, setVisIndicators, 
     indicatorsViewMode, setIndicatorsViewMode,
 }: T_EMC) {
-    const EIR = extsGraphProps.extval / visIndicators.equilibriumPrice!;
-
     return (
         <React.Fragment>
             <h2>Externalities</h2>
@@ -29,7 +26,6 @@ function ExtsMainContent({
                 title=''
                 className=''
                 extGP={extsGraphProps}
-                setExtGP={setExtsGraphProps}
                 setVisIndicators={setVisIndicators} />
             
             <div className="view-modes">

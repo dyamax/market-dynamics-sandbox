@@ -1,5 +1,5 @@
 import { MOBILE_RIPPLE_TOUCH } from '../config';
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import './Mobile.css';
 
 const ROWS = 35;

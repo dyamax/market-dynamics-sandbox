@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useEffect, useRef, useState, type ChangeEvent } from 'react';
+import React, { useEffect, useState, type ChangeEvent } from 'react';
 import { classifyExternality } from '../../API/dispatchRunInference';
 import IconButton from '../../components/icon-button';
 import Trigger from '../../components/button';
@@ -292,7 +292,6 @@ function App() {
                     ) : (
                         <ExtsMainContent
                             extsGraphProps={extsGraphProps}
-                            setExtsGraphProps={setExtsGraphProps}
                             visIndicators={extsVisIndicators}
                             setVisIndicators={setExtsVisIndicators}
                             indicatorsViewMode={indicatorsViewMode}
